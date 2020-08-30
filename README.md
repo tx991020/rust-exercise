@@ -1,0 +1,19 @@
+
+-actix web
+- mongodb
+- sqlx
+- postgres
+- mysql
+- redis
+- async-awit
+- anyhow
+- config
+- lazy_satic
+- serde
+- surf 
+- clap
+- regex
+- tera
+- shell
+
+# rust-exercise
