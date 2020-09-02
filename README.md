@@ -15,5 +15,10 @@
 - regex
 - tera
 - shell
+- reqwest
+- tide
+- smol
+- rust-s3
 
-# rust-exercise
+
+
