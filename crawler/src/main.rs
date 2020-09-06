@@ -3,7 +3,6 @@ use std::collections::{HashSet, VecDeque};
 use anyhow::Result;
 use async_channel::{bounded, Sender};
 use scraper::{Html, Selector};
-use smol::Task;
 
 const ROOT: &str = "https://www.rust-lang.org";
 
@@ -45,7 +44,7 @@ fn main() -> Result<()> {
                     Some(url) => {
                         println!("{}", url);
                         tasks += 1;
-                        Task::spawn(fetch(url, s.clone())).detach();
+                        smol::spawn(fetch(url, s.clone())).detach();
                     }
                 }
             }

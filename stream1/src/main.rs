@@ -4,7 +4,7 @@ use smol::stream::StreamExt;
 use smol::{Task, Timer};
 use std::time::{Duration, Instant};
 fn main() {
-    smol::run(async {
+    smol::block_on(async {
         let (s, r) = bounded(10);
 
         for i in 0..10 {
