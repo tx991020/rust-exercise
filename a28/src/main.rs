@@ -1,4 +1,3 @@
-use futures::stream::StreamExt;
 use serde::{Deserialize, Serialize};
 use wither::bson::{doc, oid::ObjectId};
 use wither::mongodb::Client;
