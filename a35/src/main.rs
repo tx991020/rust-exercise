@@ -1,5 +1,7 @@
 use futures::executor;
 use futures::stream::StreamExt;
+use std::thread;
+use std::time::Duration;
 
 fn main() {
     let mut paths = vec![];
@@ -14,11 +16,15 @@ fn main() {
                     Ok(text) => {
                         println!("RESPONSE: {} bytes from {}", text.len(), path);
                     }
-                    Err(_) => {println!("ERROR reading {}", path);
-                        
+                    Err(_) => {
+                        println!("ERROR reading {}", path);
+                        thread::sleep(Duration::from_secs(1));
                     }
                 },
-                Err(_) =>{ println!("ERROR downloading {}", path;}
+                Err(_) => {
+                    println!("ERROR downloading {}", path);
+                    thread::sleep(Duration::from_secs(1));
+                }
             }
         }))
         .buffer_unordered(8)
