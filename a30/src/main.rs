@@ -1,7 +1,24 @@
-use std::collections::HashMap;
+use std::collections::{BTreeMap, HashMap};
 
 fn main() {
     println!("Hello, world!");
     let mut map = HashMap::new();
     map.insert("a", 1);
+
+    for i in 0..10 {
+        println!("{}", "");
+    }
+    let mut map1 = BTreeMap::new();
+    map1.insert("b", 2);
+    map1.insert("a", 1);
+    map1.insert("c", 3);
+
+    // let l = vec![1, 2, 3];
+    // let x1: Vec<_> = l.into_iter().filter(|&x| *x > 2).rev().collect();
+    // println!("{:?}", x1)
+
+    let a = vec![0, 1, 2];
+
+    let v: Vec<_> = a.iter().filter(|&x| *x > 1).collect();
+    println!("{:?}", v);
 }

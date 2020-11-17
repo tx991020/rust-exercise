@@ -1,5 +1,7 @@
 use quicli::prelude::*;
+use std::collections::HashMap;
 use structopt::StructOpt;
+
 // Add cool slogan for your app here, e.g.:
 /// Get first n lines of a file
 #[derive(Debug, StructOpt)]
@@ -15,6 +17,7 @@ struct Cli {
     #[structopt(flatten)]
     verbosity: Verbosity,
 }
+
 fn main() -> CliResult {
     let args = Cli::from_args();
 

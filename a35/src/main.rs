@@ -27,7 +27,7 @@ fn main() {
                 }
             }
         }))
-        .buffer_unordered(8)
+        .buffer_unordered(3)
         .collect::<Vec<()>>();
         println!("Waiting...");
         fetches.await;
