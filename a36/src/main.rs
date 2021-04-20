@@ -5,8 +5,6 @@ async fn index(web::Path((id, name)): web::Path<(u32, String)>) -> impl Responde
     format!("Hello {}! id:{}", name, id)
 }
 
-async fn delay() -> impl Responder {}
-
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| App::new().service(index))

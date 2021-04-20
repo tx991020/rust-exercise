@@ -1,0 +1,1 @@
+ls: oops: No such file or directory

@@ -1,9 +1,8 @@
-use std::collections::{HashSet, VecDeque};
-
 use anyhow::Result;
-use async_channel::{bounded, Sender};
 use scraper::{Html, Selector};
+use smol::channel::{bounded, Sender};
 use smol::Task;
+use std::collections::{HashSet, VecDeque};
 
 const ROOT: &str = "https://www.rust-lang.org";
 

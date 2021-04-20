@@ -9,10 +9,6 @@ args:
       value_name: FILE
       about: Sets a custom config file
       takes_value: true
-  - INPUT:
-      about: Sets the input file to use
-      required: true
-      index: 1
   - verbose:
       short: v
       multiple: true

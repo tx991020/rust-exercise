@@ -14,15 +14,13 @@ fn main() -> Result<()> {
     // })
 
     smol::block_on(async {
-        let mut s = stream::iter(1..=100)
-            .map(|x| async move {
-                smol::spawn(async move {
-                    Timer::after(Duration::from_secs(2));
-                    println!("haha{}", x)
-                });
-                return format!("{}", x);
-            })
-            .buffer_unordered(5);
+        let mut s = stream::iter(1..=100).map(|x| async move {
+            smol::spawn(async move {
+                Timer::after(Duration::from_secs(2));
+                println!("haha{}", x)
+            });
+            return format!("{}", x);
+        });
 
         let items: Vec<_> = s.collect().await;
         for i in items {

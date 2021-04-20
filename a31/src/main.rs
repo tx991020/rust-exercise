@@ -9,7 +9,7 @@ use std::path::{Path, PathBuf};
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-
+    
     let dir_path = if args.len() > 1 { &args[1] } else { "./" };
     println!("{}", dir_path);
     walk_dir(Path::new(dir_path));

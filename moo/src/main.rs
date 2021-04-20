@@ -25,5 +25,6 @@ async fn main() -> Result<(), S3Error> {
             println!("{}", i.key);
         }
     }
+
     Ok(())
 }

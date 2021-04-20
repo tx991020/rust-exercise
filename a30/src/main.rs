@@ -19,6 +19,10 @@ fn main() {
 
     let a = vec![0, 1, 2];
 
-    let v: Vec<_> = a.iter().filter(|&x| *x > 1).collect();
+    let v: Vec<_> = a.iter().filter(|&x| *x > 0).collect();
     println!("{:?}", v);
+
+    let v1 = vec![1, 2, 3, 4, 5];
+    let v_take: Vec<_> = v1.iter().take(2).collect();
+    println!("{:?}", v_take)
 }

@@ -20,8 +20,3 @@
 - smol
 - rust-s3
 
-wowo
-
-first
-second
-three

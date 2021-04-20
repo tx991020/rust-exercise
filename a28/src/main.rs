@@ -39,9 +39,11 @@ async fn main() -> Result<()> {
     .await?;
 
     // Fetch all users.
-    let mut cursor = User::find(db.clone(), None, None).await?;
-    while let Some(user) = cursor.next().await {
-        println!("{:?}", user);
-    }
+    // let mut cursor = User::find(db.clone(), None, None).await?;
+    // while let Some(user) = cursor.next().await {
+    //     println!("{:?}", user);
+    // }
     Ok(())
 }
+
+
