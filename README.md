@@ -19,4 +19,8 @@
 - tide
 - smol
 - rust-s3
+- pyo3
+- bindgen
+- cbindgen
+- neon
 
