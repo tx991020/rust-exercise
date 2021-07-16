@@ -23,4 +23,5 @@
 - bindgen
 - cbindgen
 - neon
-
+- smartdefault
+- snafu
