@@ -25,3 +25,5 @@
 - neon
 - smartdefault
 - snafu
+- validator
+- nanoid
