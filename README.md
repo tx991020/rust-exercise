@@ -7,6 +7,8 @@
 - redis
 - async-awit
 - anyhow
+- thiserror
+- derive_more
 - config
 - lazy_satic
 - serde
