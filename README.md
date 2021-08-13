@@ -1,6 +1,8 @@
 - actix
 - actix-web
 - riker
+- tokio
+- futures
 - mongodb
 - sqlx
 - postgres
