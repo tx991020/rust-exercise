@@ -1,5 +1,6 @@
-
--actix web
+-actix
+-actix-web
+-riker
 - mongodb
 - sqlx
 - postgres
